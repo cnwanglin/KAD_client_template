@@ -1,5 +1,6 @@
 package cn.kad;
 
+import cn.kad.entity.recv.PresentEntity;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -63,7 +64,6 @@ public class MainApp {
             String msg = "ssss"+i+"\r\n";
             future.channel().writeAndFlush(msg);
         }
-
         //当通道关闭了，就继续往下走
         future.channel().closeFuture().sync();
         //System.out.println("1");
