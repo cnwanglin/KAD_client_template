@@ -1,4 +1,5 @@
 package cn.kad.constant;
+
 /**
  * @Classname HeartBeatSessionFrameTest
  * @Description TODO
@@ -7,31 +8,34 @@ package cn.kad.constant;
  */
 public class CSMConstant {
     // 会话帧类型
-    public static class CSMSessionFrameConstant{
+    public static class CSMSessionFrameConstant {
         public static final int TYPE_DATA_FRAME = 0X8F; // 数据帧
         public static final int TYPE_HEART_BEAT_FRAME = 0X0F;//心跳帧
         public static final int TYPE_DATA_FRAME_END_CODE = 0XFF;//数据帧结尾
     }
+
     // 包类型
-    public static class CSMPacketConstant{
+    public static class CSMPacketConstant {
         public static final int TYPE_DATA = 0X00; // 数据包
         public static final int TYPE_COMMAND = 0X01;//命令包
     }
+
     // 区分协议的版本
-    public static class CSMProtocolVersion{
+    public static class CSMProtocolVersion {
         public static final int TYPE_FROM_SERVER_TO_TRAIN_MACHINE = 0XE0; //服务器向站机取数据，车站响应数据或主动上送的数据
         public static final int TYPE_FROM_CLIENT_TO_SERVER = 0XE1; //终端向服务器取数据
         public static final int TYPE_FROM_SERVER_TO_TRAIN_MACHINE_AUTHENTICATION = 0XE2; //服务器向站机发送的验证数据
     }
-   //压缩类型
-    public static class CSMRARType{
+
+    //压缩类型
+    public static class CSMRARType {
         public static final int TYPE_FILE = 0X00;//文件压缩
         public static final int TYPE_MEMORY = 0X01;//内存压缩
         public static final int TYPE_8KB = 0XF0;//数据包长度大于8kb
     }
 
     // 数据类型
-    public static class CSMDataType{
+    public static class CSMDataType {
         public static final int TYPE_AQ_REAL_TIME_VALUE = 0X11;//模拟量实时值
         public static final int TYPE_AQ_LATEST_VALUE = 0X12;//模拟量最新值
         public static final int TYPE_AQ_DAILY_SHEET = 0X13;//模拟量日报表
@@ -43,8 +47,8 @@ public class CSMConstant {
         public static final int TYPE_SIGNAL_EQUIPMENT_ALARM = 0X1A;//信号设备报警
         public static final int TYPE_TRAIN_CONTROL_INFORMATION = 0X1C;//列控信息
         public static final int TYPE_SYSTEM_INFORMATION = 0X1D;//系统状态
-        public static final int TYPE_JOB_RECORD= 0X1E;//工作日志
-        public static final int TYPE_TRAIN_MACHINE_START_INFORMATION= 0X1F;//站机启动信息
+        public static final int TYPE_JOB_RECORD = 0X1E;//工作日志
+        public static final int TYPE_TRAIN_MACHINE_START_INFORMATION = 0X1F;//站机启动信息
         public static final int TYPE_NETWORK_STATE = 0X23;//网络状态
         public static final int TYPE_HF_AQ_HISTORICAL_CURVE = 0X30;//高频模拟量历史曲线
         public static final int TYPE_HF_AQ_PLAYBACK = 0X31;//高频模拟量回放
@@ -65,60 +69,74 @@ public class CSMConstant {
     }
 
     //模拟量子类型
-    public static class CSMSubAQDataType{
-        public static final int TYPE_AQ_SUPPLY_PANEL_V =0X10;//电源屏电压
+    public static class CSMSubAQDataType {
+        public static final int TYPE_AQ_SUPPLY_PANEL_V = 0X10;//电源屏电压
         /**
          * more
          */
     }
 
     //记录曲线分类
-    public static class CSMHistoricalCurveType{
-        public static final int TYPE_TW_ACTION_CURVE =0X10;//道岔动作曲线
+    public static class CSMHistoricalCurveType {
+        public static final int TYPE_TW_ACTION_CURVE = 0X10;//道岔动作曲线
         /**
          * more
          */
     }
 
     //报警子类型
-    public static class CSMSignalEquipmentAlarmType{
-        public static final int TYPE_SJ_LOCK =0X01;//SJ锁闭封联报警
+    public static class CSMSignalEquipmentAlarmType {
+        public static final int TYPE_SJ_LOCK = 0X01;//SJ锁闭封联报警
         /**
          * more
          */
     }
 
     //工作日志子类型
-    public static class CSMJobRecordType{
-        public static final int TYPE_SYSTEM =0X03;//系统工作日志
-        /**
-         * more
-         */
+    public static class CSMJobRecordType {
+        public static final int TYPE_SYSTEM_WORK = 0X03;//系统工作日志
+        public static final int TYPE_USER_OPERATE = 0X04;//用户操作日志
+        public static final int TYPE_SKYLIGHT_WORK = 0X05;//天窗作业日志
+        public static final int TYPE_CLOCK_TIMING = 0X06;//时钟校时日志
+        public static final int TYPE_BUTTON_OPERATE_RECORD = 0X07;//按钮操作记录日志
     }
 
     //统计子类型
-    public static class CSMStatisticalType{
-        public static final int TYPE_TW_ACTION_COUNT =0X60;//道岔动作次数
-        /**
-         * more
-         */
+    public static class CSMStatisticalType {
+        public static final int TYPE_TW_ACTION_COUNT = 0X60;//道岔动作次数
+        public static final int TYPE_SECTION_APPLICATION_COUNT = 0X61;//区段运用次数/时间
+        public static final int TYPE_SIGNAL_OPENING_COUNT = 0X62;//信号开放次数/时间
+        public static final int TYPE_TRAIN_BUTTON_COUNT = 0X63;//列车、调车按钮次数/时间统计
+        public static final int TYPE_BREAKING_BUTTON_COUNT = 0X64;//破封按钮使用次数/时间统计
+        public static final int TYPE_EQUIPMENT_FAILURE_STATISTIC = 0X65;//设备故障统计
+
     }
 
     //特色功能子类型
-    public static class CSMKeyFeaturesType{
-        public static final int TYPE_KSK_1 =0X01;//卡斯克信号——1
-        public static final int TYPE_KSK_22 =0X22;//卡斯克信号——22
-        public static final int TYPE_HW =0X02;//河南辉煌
-        /**
-         * more
-         */
+    public static class CSMKeyFeaturesType {
+        public static final int TYPE_KSK_1 = 0X01;//卡斯克信号——1
+        public static final int TYPE_KSK_22 = 0X22;//卡斯克信号——22
+        public static final int TYPE_HNHH = 0X02;//河南辉煌科技
+        public static final int TYPE_BJQL = 0X03;//北京全路通信信号研究设计院集团有限公司
+        public static final int TYPE_SHTD = 0X04;//上海铁大电信科技股份有限公司
+        public static final int TYPE_ZGTD = 0X05;//中国铁道科学研究院集团有限公司
+        public static final int TYPE_SZCL = 0X06;//深圳长龙铁路电子工程有限公司
+        public static final int TYPE_SCWD = 0X07;//四川网达科技有限公司
+        public static final int TYPE_NCLT = 0X08;//南昌路通高新技术有限责任公司
+        public static final int TYPE_BJJD = 0X09;//北京交大微联科技有限公司
+
     }
 
     //视频缺口文件类型
-    public static class CSMVideoType{
-        public static final int TYPE_REAL_TIME =0X01;//实时图像
-        /**
-         * more
-         */
+    public static class CSMVideoType {
+        public static final int TYPE_REAL_TIME_IMG = 0X01;//实时图像
+        public static final int TYPE_WARING_ING = 0X02;//报警图像
+        public static final int TYPE_WRAING_RECOVERY_IMG = 0X03;//报警恢复图像
+        public static final int TYPE_PASS_CAR_IMG = 0X04;//过车图像
+        public static final int TYPE_VIBRATION_IMG = 0X05;//振动图像
+        public static final int TYPE_STATIC_IMG = 0X06;//静态图像
+        public static final int TYPE_PASS_CAR_VIDEO = 0X07;//过车视频
+        public static final int TYPE_PULL_VIDEO = 0X08;//扳动视频
+
     }
 }
