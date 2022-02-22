@@ -62,14 +62,98 @@ public class CSMConstant {
         public static final int TYPE_CONFIGURATION_FILES_UPLOAD = 0X52;//配置文件上送
         public static final int TYPE_VIDEO_FILES_LIST = 0X60;//视频缺口文件列表
         public static final int TYPE_VIDEO_FILES = 0X61;//视频缺口文件
-    }
+    }//
 
     //模拟量子类型
     public static class CSMSubAQDataType{
+
+        //电源
         public static final int TYPE_AQ_SUPPLY_PANEL_V =0X10;//电源屏电压
         /**
          * more
          */
+        public static final int TYPE_AQ_EXTERNAL_GRID_M = 0X11;//外电网监测
+        public static final int TYPE_AQ_UPS = 0X12;//UPS
+
+        //轨道
+        public static final int TYPE_AQ_TRACK_V = 0X20;//轨道电压
+        public static final int TYPE_AQ_ORBITAL_PHASE_A = 0X21;//轨道相位角
+        public static final int TYPE_AQ_TRACK_C = 0X22;//轨道电流
+        public static final int TYPE_AQ_HIGH_VOLTAGE_A = 0X23;//高压不对称
+        public static final int TYPE_AQ_SHUNT_RESIDUAL_V = 0X24;//分录残压
+        public static final int TYPE_AQ_AXLE_C = 0X25;//计轴
+        public static final int TYPE_AQ_TRACK_DC_V = 0X26;//轨道直流电压
+        public static final int TYPE_AQ_TRACTION_CURRENT_INTERFERENCE_VOLTAGE_RES = 0XF5;//牵引电流干扰电压（预留）
+
+        //道岔
+        public static final int TYPE_AQ_TURNOUT_INDICATION_V = 0X30;//道岔表示电压
+        public static final int TYPE_AQ_ANALOG_QUANTITY_OF_TURNOUT_G = 0X31;//道岔缺口模拟量
+        public static final int TYPE_AQ_SWITCH_MACHINE_P = 0X32;//转辙机功率
+        public static final int TYPE_AQ_OIL_LEVEL_ANALOG_QUANTITY = 0X33;//油位模拟量
+
+        //信号机、半自动闭塞、站联电压信息
+        public static final int TYPE_AQ_FILAMENT_RELAY_C = 0X40;//灯丝继电器电流
+        public static final int TYPE_AQ_FILAMENT_RELAY_VOLTAGE_RES = 0X41;//灯丝继电器电压(预留)
+        public static final int TYPE_AQ_SEMI_AUTOMATIC_B = 0X42;//半自动闭塞
+        public static final int TYPE_AQ_STATION_CONNECTION_V = 0X43;//站联电压
+
+        //站内电码化区间移频
+        public static final int TYPE_AQ_CODED_TRANSMISSION_V = 0X50;//电码化发送电压
+        public static final int TYPE_AQ_CODED_TRANSMISSION_C = 0X51;//电码化发送电流
+        public static final int TYPE_AQ_CODED_CARRIER_FREQUENCY_CF = 0X52;//电码化载频（电码化频率）
+        public static final int TYPE_AQ_CODED_LOW_F = 0X54;//电码化低频
+        public static final int TYPE_AQ_CODED_UPPER_SIDE_F = 0X55;//电码化上边频
+        public static final int TYPE_AQ_CODED_LOWER_SIDE_F = 0X56;//电码化下边频
+
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_TRANSMITTER_SENDING_V = 0X58;//移频发送器发送电压
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_TRANSMITTER_SENDING_C = 0X59;//移频发送器发送电流
+        public static final int TYPE_AQ_CARRIER_FREQUENCY_OF_FREQUENCY_SHIFT_TRANSMITTER_FStF = 0X5A;//移频发送器载频（移频发送频率）
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_TRANSMISSION_LOW_F = 0X5B;//移频发送低频
+        public static final int TYPE_AQ_MAIN_RAIL_IN_VOLTAGE_FSRV = 0X5C;//主轨轨入电压（移频接收电压）
+        public static final int TYPE_AQ_MAIN_RAIL_IN_CARRIER_FREQUENCY_FSRF = 0X5D;//主轨轨入载频（移频接收频率）
+        public static final int TYPE_AQ_MAIN_RAIL_IN_LOW_F = 0X5E;//主轨轨入低频
+        public static final int TYPE_AQ_RAIL_OUT_1_VOLTAGE_FS = 0X5F;//（移频）轨出1电压
+        public static final int TYPE_AQ_TRACK_OUT_1_CARRIER_FREQUENCY_MR = 0X60;//（主轨）轨出1载频
+        public static final int TYPE_AQ_RAIL_OUT_1_LOW_FREQUENCY_MR = 0X61;//（主轨）轨出1低频
+        public static final int TYPE_AQ_RAIL_OUT_2_VOLTAGE_FS = 0X62;//（移频）轨出2电压
+        public static final int TYPE_AQ_TRACK_OUT_2_CARRIER_FREQUENCY_ST = 0X63;//轨出2载频（小轨）
+        public static final int TYPE_AQ_TRACK_OUT_2_LOW_FREQUENCY_ST = 0X64;//轨出2低频（小轨）
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_TRANSMISSION_CABLE_SIDE_V = 0X65;//移频发送电缆侧电压
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_RECEIVING_CABLE_SIDE_V = 0X66;//移频接收电缆侧电压
+        public static final int TYPE_AQ_RAIL_OUT_1_UPPER_SIDE_FREQUENCY_MR = 0X67;//（主轨）轨出1上边频
+        public static final int TYPE_AQ_RAIL_OUT_1_LOWER_SIDE_FREQUENCY_MR = 0X68;//（主轨）轨出1下边频
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_TRANSMISSION_CABLE_SIDE_C = 0X69;//移频发送电缆侧电流
+        public static final int TYPE_AQ_BALLAST_BED_R = 0X6A;//道床电阻
+        public static final int TYPE_AQ_RAIL_OUT_1_SHUNT_RESIDUAL_V = 0X6B;//轨出1分路残压（0.15欧姆）
+        public static final int TYPE_AQ_SMALL_RAIL_INPUT_V = 0X6C;//小轨轨入电压
+        public static final int TYPE_AQ_ZPW_2000_INTERFACE_INFORMATION = 0X90;//ZPW-2000接口信息
+        public static final int TYPE_AQ_TRACK_CODING = 0X92;//轨道编码
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_TRANSMISSION_CABLE_SIDE_CARRIER_F = 0X6D;//移频发送电缆侧载频
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_TRANSMISSION_CABLE_SIDE_LOWER_F = 0X6E;//移频发送电缆侧低频
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_RECEIVING_CABLE_SIDE_CARRIER_F = 0X6F;//移频接收电缆侧载频
+        public static final int TYPE_AQ_FREQUENCY_SHIFT_RECEIVING_CABLE_SIDE_LOWER_F = 0X76;//移频接收电缆低载频
+        public static final int TYPE_AQ_RECEIVING_END_CABLE_SIDE_SMALL_RAIL_CARRIER_F = 0X72;//受端电缆侧小轨载频
+        public static final int TYPE_AQ_RECEIVING_END_CABLE_SIDE_SMALL_RAIL_LOWER_F = 0X73;//受端电缆侧小轨低频
+        public static final int TYPE_AQ_SMALL_RAIL_IN_CARRIER_F = 0X74;//小轨轨入载频
+        public static final int TYPE_AQ_SMALL_RAIL_IN_LOWER_F = 0X75;//小轨轨入低频
+        public static final int TYPE_AQ_RECEIVING_END_CABLE_SIDE_SMALL_RAIL_V = 0X78;//受端电缆侧小轨电压
+
+        //环境监测
+        public static final int TYPE_AQ_ENVIRONMENTAL_ANALOG_QUANTITY = 0X70;//环境模拟量（含空调电压）
+        public static final int TYPE_AQ_AIR_CONDITIONING_PARAMETERS = 0X71;//空调参数
+
+        //电缆绝缘及电源漏流
+        public static final int TYPE_AQ_CABLE_INSULATION = 0X80;//
+        public static final int TYPE_AQ_POWER_LEAKAGE = 0X81;//
+
+        //新增模拟量
+        public static final int TYPE_AQ_RELAY_TERMINAL_V = 0X91;//异物继电器端电压
+        public static final int TYPE_AQ_OUTDOOR_MONITORING_TRACK_ANALOG_QUANTITY = 0X93;//室外监测轨道模拟量（指ZPW-2000室外采集）
+        public static final int TYPE_AQ_OUTDOOR_MONITORING_TRACK_V = 0X94;//室外监测轨道电压（指25 Hz/50 Hz轨道电路室外采集）
+        public static final int TYPE_AQ_OUTDOOR_MONITORING_SIGNAL = 0X95;//室外监测信号机
+        public static final int TYPE_AQ_OUTDOOR_MONITORING_SWITCH_INDICATION_V = 0X96;//室外监测道岔表示电压
+
+
     }
 
     //记录曲线分类
