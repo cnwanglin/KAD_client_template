@@ -8,8 +8,8 @@ public abstract class AbstractCSMPacket extends DataSessionFrame {
     private byte[] src = new byte[3];
     private byte CSM_PACKET_TYPE = CSMConstant.CSMPacketConstant.TYPE_COMMAND;
     private byte */
-    private long dest;
-    private long src;
+    private int dest;
+    private int src;
     private boolean isCommand;
     private byte protocolVersion;
     private byte dateType;
