@@ -1,2 +1,2 @@
 # KAD_client_template
-科恩达
+科安达
